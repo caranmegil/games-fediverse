@@ -56,7 +56,9 @@ client
     setInterval( () => {
       activeClient.getPublicTimeline().then( (resp: Response<Array<Entity.Status>>) => {
         resp.data.forEach( (value: any) => {
-
+          let match = value.content.match(/\!hazard ([5-9])/)
+          if (match) {
+          }
         })
       })
     }, 1000)
